@@ -33,3 +33,16 @@ const Pokemon = ({ url }) => {
 //_______________________________________________________
     setAttackInfo({
       name: selectedMove.name,
+      damage: power
+    });
+  };
+// drag n drop section ___________________________________________
+  useEffect(() => {
+    fetchPokemonDetail();
+  }, []);
+
+  const handleClick = () => {
+    const audio = new Audio(pokemonDetail?.cries?.latest);
+    audio.play();
+  };
+
