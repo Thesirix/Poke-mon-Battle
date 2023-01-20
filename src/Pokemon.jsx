@@ -23,3 +23,13 @@ const Pokemon = ({ url }) => {
       const randomMoveIndex = Math.floor(Math.random() * response.data.moves.length);
       const randomMove = response.data.moves[randomMoveIndex].move;
 
+      const moveResponse = await axios.get(randomMove.url);
+      power = moveResponse.data.power;
+
+      if (power && power !== 0) {
+        selectedMove = randomMove;
+      }
+    }
+//_______________________________________________________
+    setAttackInfo({
+      name: selectedMove.name,
