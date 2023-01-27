@@ -69,3 +69,16 @@ const Pokemon = ({ url }) => {
 
     const newPercentage = (newHP / targetHPStat.base_stat) * 100;
 
+    const updatedPokemonDetail = {
+      ...pokemonDetail,
+      stats: pokemonDetail.stats.map(stat => {
+        if (stat.stat.name === "hp") {
+          return {
+            ...stat,
+            base_stat: newHP
+          };
+        }
+        return stat;
+      })
+    };
+
