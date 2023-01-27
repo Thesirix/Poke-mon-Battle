@@ -46,3 +46,16 @@ const Pokemon = ({ url }) => {
     audio.play();
   };
 
+  const handleDragStart = (event) => {
+    event.dataTransfer.setData("text/plain", JSON.stringify({ pokemonDetail, attackInfo }));
+  };
+
+  const handleDragOver = (event) => {
+    event.preventDefault();
+  };
+
+  const handleDrop = (event) => {
+    event.preventDefault();
+    const data = JSON.parse(event.dataTransfer.getData("text/plain"));
+    const { attackInfo: sourceAttackInfo } = data;
+
