@@ -59,3 +59,13 @@ const Pokemon = ({ url }) => {
     const data = JSON.parse(event.dataTransfer.getData("text/plain"));
     const { attackInfo: sourceAttackInfo } = data;
 
+    const sourceAttackPower = sourceAttackInfo.damage;
+
+    const targetHPStat = pokemonDetail?.stats.find(stat => stat.stat.name === "hp");
+    if (!targetHPStat) return;
+
+    let newHP = targetHPStat.base_stat - sourceAttackPower;
+    newHP = Math.max(newHP, 0);
+
+    const newPercentage = (newHP / targetHPStat.base_stat) * 100;
+
