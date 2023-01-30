@@ -82,3 +82,13 @@ const Pokemon = ({ url }) => {
       })
     };
 
+    setPokemonDetail(updatedPokemonDetail);
+    setHealthPercentage(newPercentage);
+  };
+// ________________________________________________________________________________
+  return (
+    <div style={{ display: 'inline-block', marginRight: '20px' }}>
+      <div>{pokemonDetail?.name}</div>
+      <img
+        src={pokemonDetail?.sprites?.front_default}
+        onClick={handleClick}
