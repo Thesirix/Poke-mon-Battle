@@ -92,3 +92,13 @@ const Pokemon = ({ url }) => {
       <img
         src={pokemonDetail?.sprites?.front_default}
         onClick={handleClick}
+        draggable={true}
+        onDragStart={handleDragStart}
+        onDragOver={handleDragOver}
+        onDrop={handleDrop}
+        alt={pokemonDetail?.name}
+      />
+      <div>HP: {pokemonDetail?.stats.find(stat => stat.stat.name === "hp").base_stat}</div>
+      <div
+        style={{
+          height: '10px',
