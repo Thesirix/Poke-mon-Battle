@@ -102,3 +102,18 @@ const Pokemon = ({ url }) => {
       <div
         style={{
           height: '10px',
+          borderRadius: '5px',
+          backgroundColor: healthPercentage === 100 ? 'green' : 'red',
+          marginTop: '5px',
+          width: `${healthPercentage}%` // Réduire la taille en fonction du pourcentage de points de vie restants
+        }}
+      />
+      {attackInfo && (
+        <div>
+          Attack: {attackInfo.name} - Damage: {attackInfo.damage}
+        </div>
+      )}
+    </div>
+  );
+};
+
