@@ -117,3 +117,4 @@ const Pokemon = ({ url }) => {
   );
 };
 
+export default Pokemon;
