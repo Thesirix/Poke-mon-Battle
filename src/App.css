@@ -45,3 +45,14 @@
 .container {
   text-align: center;
 
+}
+
+.pokemon-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.pokemon-container > div {
+  margin: 10px;
+}
