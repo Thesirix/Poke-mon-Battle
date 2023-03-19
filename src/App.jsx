@@ -13,3 +13,13 @@ const App = () => {
       setAllPokemon(response.data.results);
     };
 
+    fetchAllPokemons(); 
+  }, []);
+
+  useEffect(() => {
+    if (pokemSoundPlayed) {
+      const audio = new Audio('src/assets/pokem.mp3');
+      audio.playbackRate = 1.2; //pitch bend
+      audio.play();
+      setTimeout(() => {
+        const openingAudio = new Audio('src/assets/Pokemon-Bleu- Opening.mp3');
