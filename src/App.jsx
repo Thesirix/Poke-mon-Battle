@@ -23,3 +23,13 @@ const App = () => {
       audio.play();
       setTimeout(() => {
         const openingAudio = new Audio('src/assets/Pokemon-Bleu- Opening.mp3');
+        openingAudio.currentTime = 0.2; // quand ça commence pour éviter le vide 
+        openingAudio.play();
+      }, 50); // delai pour laisser charger
+    }
+  }, [pokemSoundPlayed]);
+
+  const handleStartButtonClick = () => {
+    setPokemSoundPlayed(true);
+  };
+
