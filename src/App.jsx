@@ -33,3 +33,17 @@ const App = () => {
     setPokemSoundPlayed(true);
   };
 
+  const handleDrop = (event, targetPokemon) => {
+    event.preventDefault();
+    const draggedPokemonUrl = event.dataTransfer.getData('text/plain');
+    const attackingPokemon = allPokemons.find(pokemon => pokemon.url === draggedPokemonUrl);
+    if (!attackingPokemon) return;
+
+    const updatedPokemons = allPokemons.map(pokemon => {
+      if (pokemon.url === targetPokemon.url) {
+        const updatedHP = Math.max(0, pokemon.hp); 
+        return { ...pokemon, hp: updatedHP };
+      }
+      return pokemon;
+    });
+
