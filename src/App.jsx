@@ -57,3 +57,13 @@ const App = () => {
       {!pokemSoundPlayed && (
         <button className="start-button" onClick={handleStartButtonClick}>
           <span className="start-button-text">Start</span>
+        </button>
+      )}
+      {pokemSoundPlayed && (
+        <>
+          <h1>Poke'mon Battle !</h1>
+          <h4>Supreme fighter of the fifth star ✨</h4>
+          <div className="pokemon-container">
+            {allPokemons.map(pokemon => (
+              <Pokemon key={pokemon.name} url={pokemon.url} onDrop={(event) => handleDrop(event, pokemon)} />
+            ))}
