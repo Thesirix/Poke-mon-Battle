@@ -47,3 +47,13 @@ const App = () => {
       return pokemon;
     });
 
+    setAllPokemon(updatedPokemons);
+
+   
+  };
+
+  return (
+    <div className="container">
+      {!pokemSoundPlayed && (
+        <button className="start-button" onClick={handleStartButtonClick}>
+          <span className="start-button-text">Start</span>
