@@ -67,3 +67,11 @@ const App = () => {
             {allPokemons.map(pokemon => (
               <Pokemon key={pokemon.name} url={pokemon.url} onDrop={(event) => handleDrop(event, pokemon)} />
             ))}
+          </div>
+        </>
+      )}
+    </div>
+  );
+};
+
+export default App;
