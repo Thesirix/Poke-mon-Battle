@@ -46,9 +46,9 @@ L'application vise à offrir une expérience interactive et divertissante aux ut
 ## Contribution
 Les contributions sont les bienvenues ! Si vous souhaitez contribuer à ce projet, veuillez ouvrir une issue pour discuter des changements que vous souhaitez apporter.
 
-![pokemon](assets/pokeinst.png)
+![pokemon](./src/assets/pokeinst.png)
 
-![fight](assets/fight.png)
+![fight](./src/assets/fight.png)
 
 
 
