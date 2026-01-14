@@ -1,54 +1,68 @@
-# Application Poké'mon Battle
+# ⚔️ Pokémon Battle App
 
 ## Description
-Cette application en React permet de simuler des combats Pokémon en utilisant l'API Pokémon. Les utilisateurs peuvent sélectionner aléatoirement des attaques et faire s'affronter les Pokémon en les faisant glisser et déposer les uns sur les autres. De plus, en cliquant sur un Pokémon, son cri sera activé.
 
-## Fonctionnalités
-- Sélection aléatoire d'attaques
-- Combat en glisser-déposer
-- Activation des cris des Pokémon au clic
+This React application simulates Pokémon battles using the **Pokémon API**. Users can randomly select attacks and make Pokémon fight by dragging and dropping them onto each other. Additionally, clicking on a Pokémon triggers its unique cry.
 
-## Prérequis
-- Node.js installé sur votre machine
-- Connexion Internet pour accéder à l'API Pokémon
+## ✨ Features
 
-## Installation
-1. Clonez ce dépôt sur votre machine.
-2. Accédez au répertoire du projet dans votre terminal.
-3. Exécutez la commande `npm install` pour installer les dépendances.
+- 🎲 **Random Attack Selection:** Moves are randomized for variety.
+- 🖱️ **Drag-and-Drop Combat:** Intuitive mechanics to start battles.
+- 🔊 **Sound Effects:** Activate Pokémon cries by clicking on them.
 
-## Utilisation
-1. Lancez l'application en exécutant la commande `npm start`.
-2. Ouvrez votre navigateur et accédez à l'adresse indiquée dans votre terminal.
-3. Commencez à sélectionner les attaques et à faire combattre les Pokémon en les faisant glisser et déposer.
+## 📋 Prerequisites
 
-## Fonctionnement de l'application
+- **Node.js** installed on your machine.
+- **Internet connection** to access the Pokémon API.
 
-### Sélection aléatoire d'attaques
-- L'application interroge l'API Pokémon au chargement pour obtenir une liste de Pokémon et de leurs attaques disponibles.
-- À chaque nouveau combat, deux attaques sont sélectionnées aléatoirement pour chaque Pokémon impliqué.
+## 🚀 Installation
 
-### Combat en glisser-déposer
-- Les Pokémon disponibles sont affichés s à l'écran.
-- L'utilisateur peut sélectionner un Pokémon en le faisant glisser et déposer sur un autre.
-- Le combat commence automatiquement.
+1. Clone this repository to your machine.
+2. Navigate to the project directory in your terminal.
+3. Run the following command to install dependencies:
 
-### Déroulement du combat
-- Les attaques infligent des dégâts à l'autre Pokémon, réduisant ses points de vie.
+```bash
+npm install
+```
 
+## 🎮 Usage
 
-### Activation des cris des Pokémon
-- En cliquant sur un Pokémon, l'application joue le cri caractéristique de ce Pokémon.
+1. Launch the application by running:
 
-L'application vise à offrir une expérience interactive et divertissante aux utilisateurs, tout en leur permettant de découvrir les différents Pokémon et leurs capacités de combat.
+```bash
+npm start
+```
 
+2. Open your browser and go to the address indicated in your terminal (usually `http://localhost:3000`).
+3. Start selecting attacks and make Pokémon fight by dragging and dropping them.
 
-## Contribution
-Les contributions sont les bienvenues ! Si vous souhaitez contribuer à ce projet, veuillez ouvrir une issue pour discuter des changements que vous souhaitez apporter.
+## ⚙️ How it Works
+
+### 🎲 Random Attack Selection
+
+- The application queries the Pokémon API upon loading to fetch a list of Pokémon and their available moves.
+- For every new battle, two attacks are randomly selected for each Pokémon involved.
+
+### ⚔️ Drag-and-Drop Combat
+
+- Available Pokémon are displayed on the screen.
+- The user can select a Pokémon by dragging and dropping it onto another.
+- The battle starts automatically upon drop.
+
+### 📉 Combat Flow
+
+- Attacks deal damage to the opponent, reducing their Health Points (HP).
+
+### 🔊 Pokémon Cries
+
+- By clicking on a Pokémon, the application plays the characteristic cry of that Pokémon.
+
+The application aims to offer an interactive and entertaining experience for users, allowing them to discover different Pokémon and their combat abilities.
+
+## 🤝 Contribution
+
+Contributions are welcome! If you wish to contribute to this project, please open an issue to discuss the changes you would like to make.
 
 ![pokemon](./src/assets/pokeinst.png)
 
 ![fight](./src/assets/fight.png)
-
-
-
